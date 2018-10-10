@@ -5,6 +5,9 @@
 # Ignore Python cache.
 __pycache__
 
+# Ignore local settings.
+yars/settings/local.py
+
 
 # Keep this '.gitignore'.
 !.gitignore

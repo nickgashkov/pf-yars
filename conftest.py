@@ -1,4 +1,5 @@
 from __future__ import annotations
 
+from typing import List
 
-pytest_plugins = list()
+pytest_plugins: List[str] = list()

@@ -29,6 +29,7 @@ pexpect==4.6.0            # via ipython
 pickleshare==0.7.5        # via ipython
 pluggy==0.7.1             # via pytest
 prompt-toolkit==2.0.5     # via ipython
+psycopg2-binary==2.7.5
 ptyprocess==0.6.0         # via pexpect
 py==1.6.0                 # via pytest
 pyflakes==2.0.0           # via autoflake

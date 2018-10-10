@@ -5,4 +5,5 @@
 #    pip-compile --output-file /home/gashkov/pf/yars/pf-yars/deploy/requirements/base.out /home/gashkov/pf/yars/pf-yars/deploy/requirements/base.in
 #
 django==2.1.2
+psycopg2-binary==2.7.5
 pytz==2018.5              # via django
