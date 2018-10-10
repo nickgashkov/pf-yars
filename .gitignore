@@ -8,3 +8,6 @@ __pycache__
 
 # Keep this '.gitignore'.
 !.gitignore
+
+# Keep 'isort' configuration.
+!.isort.cfg

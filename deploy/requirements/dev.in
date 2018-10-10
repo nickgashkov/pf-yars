@@ -1,1 +1,12 @@
 -r base.in
+
+autoflake
+black
+django-extensions
+factory_boy
+ipython
+isort
+mypy
+pytest
+pytest-django
+pytest-factoryboy
