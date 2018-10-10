@@ -1,0 +1,10 @@
+# Ignore system files.
+.*
+*~
+
+# Ignore Python cache.
+__pycache__
+
+
+# Keep this '.gitignore'.
+!.gitignore
