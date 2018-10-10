@@ -1,4 +1,4 @@
-.PHONY: fmt update upgrade test typecheck
+.PHONY: fmt check update upgrade test
 
 
 SRCDIR = $(shell pwd)
@@ -11,6 +11,7 @@ AUTOFLAKESKIP = $(CODEDIR)/settings/**/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(
 
 
 fmt: _sort _style
+check: _stylecheck _typecheck
 
 update:
 	pip-compile --upgrade --output-file $(DEPSDIR)/base.out $(DEPSDIR)/base.in
@@ -22,7 +23,10 @@ upgrade:
 test:
 	pytest $(SRCDIR)
 
-typecheck:
+_stylecheck:
+	black $(CODEDIR)/ --check
+
+_typecheck:
 	mypy $(SRCDIR)
 
 _sort:
