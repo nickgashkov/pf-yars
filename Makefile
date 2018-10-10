@@ -1,4 +1,4 @@
-.PHONY: fmt check update upgrade test
+.PHONY: fmt check update upgrade test clean
 
 
 SRCDIR = $(shell pwd)
@@ -23,15 +23,18 @@ upgrade:
 test:
 	pytest $(SRCDIR)
 
+clean:
+	find $(SRCDIR) -type d -name __pycache__ -o \( -type f -name '*.py[co]' \) -print0 | xargs -0 rm -rf
+
 _stylecheck:
-	black $(CODEDIR)/ --check
+	black $(SRCDIR)/ --check
 
 _typecheck:
 	mypy $(SRCDIR)
 
 _sort:
-	autoflake -r -i --remove-all-unused-imports --exclude $(AUTOFLAKESKIP) $(CODEDIR)/
-	isort -rc $(CODEDIR)/
+	autoflake -r -i --remove-all-unused-imports --exclude $(AUTOFLAKESKIP) $(SRCDIR)/
+	isort -rc $(SRCDIR)/
 
 _style:
-	black $(CODEDIR)/
+	black $(SRCDIR)/
