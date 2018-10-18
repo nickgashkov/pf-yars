@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'yars.apps.core',
+    'yars.apps.frontend',
     'yars.apps.things',
 ]
 
