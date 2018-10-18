@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'yars.apps.things'
 ]
 
 MIDDLEWARE = [
@@ -59,6 +61,8 @@ DATABASES = {
         'NAME': 'yars',
         'USER': '',
         'PASSWORD': '',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 

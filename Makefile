@@ -7,7 +7,7 @@ DEPSDIR = $(SRCDIR)/deploy/requirements
 
 CUSTOM_COMPILE_COMMAND="make update"
 
-AUTOFLAKESKIP = $(CODEDIR)/settings/**/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
+AUTOFLAKESKIP = $(CODEDIR)/settings/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
 
 
 fmt: _sort _style
