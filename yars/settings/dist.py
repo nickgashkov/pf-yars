@@ -20,7 +20,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'yars.apps.things'
+    'yars.apps.core',
+    'yars.apps.things',
 ]
 
 MIDDLEWARE = [
