@@ -8,9 +8,18 @@ __pycache__
 # Ignore local settings.
 yars/settings/local.py
 
+# Ignore node modules.
+yars/apps/frontend/node_modules
+
 
 # Keep this '.gitignore'.
 !.gitignore
 
+# Keep '.gitkeep' to commit empty directories.
+!.gitkeep
+
 # Keep 'isort' configuration.
 !.isort.cfg
+
+# Keep 'babel' configuration.
+!yars/apps/frontend/.babelrc
