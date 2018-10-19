@@ -1,4 +1,4 @@
-path = require('path');
+path = require("path");
 
 module.exports = {
   module: {
@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, './src/'),
-    },
-  },
+      src: path.resolve(__dirname, "./src/")
+    }
+  }
 };

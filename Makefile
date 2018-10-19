@@ -4,14 +4,15 @@
 SRCDIR = $(shell pwd)
 CODEDIR = $(SRCDIR)/yars
 DEPSDIR = $(SRCDIR)/deploy/requirements
+FRONTDIR = $(CODEDIR)/apps/frontend
 
 CUSTOM_COMPILE_COMMAND="make update"
 
 AUTOFLAKESKIP = $(CODEDIR)/settings/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
 
 
-fmt: _sort _style
-check: _stylecheck _typecheck
+fmt: _sort _style _frontend_style
+check: _stylecheck _typecheck _frontend_stylecheck
 
 update:
 	pip-compile --upgrade --output-file $(DEPSDIR)/base.out $(DEPSDIR)/base.in
@@ -29,6 +30,9 @@ clean:
 _stylecheck:
 	black $(SRCDIR)/ --check
 
+_frontend_stylecheck:
+	npx --prefix $(FRONTDIR) prettier --list-different "**/src/**/*.js"
+
 _typecheck:
 	mypy $(SRCDIR)
 
@@ -38,3 +42,6 @@ _sort:
 
 _style:
 	black $(SRCDIR)/
+
+_frontend_style:
+	npx --prefix $(FRONTDIR) prettier --write "**/src/**/*.js"
