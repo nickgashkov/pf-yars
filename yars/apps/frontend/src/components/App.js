@@ -1,8 +1,14 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import Login from "src/components/Login/Login";
 
 class App extends React.Component {
   render() {
-    return <h1>App</h1>;
+    return (
+      <BrowserRouter>
+        <Route exact path="/" component={Login} />
+      </BrowserRouter>
+    );
   }
 }
 
