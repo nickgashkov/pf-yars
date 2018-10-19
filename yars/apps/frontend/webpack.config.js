@@ -1,6 +1,13 @@
-path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const path = require("path");
 
 module.exports = {
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.bundle.css',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -9,12 +16,19 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
     ]
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, "./src/")
+      src: path.resolve(__dirname, "./src/"),
     }
   }
 };
