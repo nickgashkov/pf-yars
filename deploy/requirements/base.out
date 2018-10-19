@@ -5,6 +5,8 @@
 #    pip-compile --output-file /home/gashkov/pf/yars/pf-yars/deploy/requirements/base.out /home/gashkov/pf/yars/pf-yars/deploy/requirements/base.in
 #
 django==2.1.2
+djangorestframework-jwt==1.11.0
 djangorestframework==3.9.0
 psycopg2-binary==2.7.5
+pyjwt==1.6.4              # via djangorestframework-jwt
 pytz==2018.5              # via django

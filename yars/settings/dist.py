@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'rest_framework_jwt',
 
     'yars.apps.core',
     'yars.apps.frontend',
@@ -91,3 +92,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+
+REST_FRAMEWORK = {
+    'NON_FIELD_ERRORS_KEY': '_error',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
