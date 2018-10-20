@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 
+spa = r"^(?!admin/)(?!api/).*$"
+
 urlpatterns = [
-    path("", include("yars.apps.frontend.urls", namespace="frontend")),
+    re_path(spa, include("yars.apps.frontend.urls", namespace="frontend")),
     path("admin/", admin.site.urls),
     path("api/things/", include("yars.apps.things.urls", namespace="things")),
     path("api/token/obtain/", obtain_jwt_token, name="token_obtain"),
