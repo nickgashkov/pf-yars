@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Login from "src/components/Login/Login";
+import Login from "./Login/Login";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <BrowserRouter>
