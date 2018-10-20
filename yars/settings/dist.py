@@ -97,6 +97,6 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     'NON_FIELD_ERRORS_KEY': '_error',
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
 }
