@@ -8,6 +8,7 @@ module.exports = {
       filename: 'main.bundle.css',
     }),
   ],
+  watch: true,
   module: {
     rules: [
       {

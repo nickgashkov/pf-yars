@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
 class LoginForm extends Component {
+  onFormSubmit(event) {
+    event.preventDefault();
+    window.location.replace("/");
+  }
+
   render() {
     return (
-      <form className="box">
+      <form onSubmit={this.onFormSubmit} className="box">
         <div className="field has-text-centered">
           <p>YARS</p>
         </div>
