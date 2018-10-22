@@ -11,6 +11,12 @@ yars/settings/local.py
 # Ignore node modules.
 frontend/node_modules
 
+# Ignore development builds.
+frontend/builds/dev
+
+# Ignore 'yarn' error log.
+frontend/yarn-error.log
+
 
 # Keep this '.gitignore'.
 !.gitignore

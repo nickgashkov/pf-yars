@@ -15,6 +15,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
+    path: path.resolve(process.cwd(), 'builds/prod'),
   },
 
   optimization: {
@@ -71,9 +72,9 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'React Boilerplate',
-      short_name: 'React BP',
-      description: 'My React Boilerplate-based project!',
+      name: 'Yet Another Rating Site',
+      short_name: 'YARS',
+      description: 'Templates! Templates everywhere!',
       background_color: '#fafafa',
       theme_color: '#b1624d',
       icons: [

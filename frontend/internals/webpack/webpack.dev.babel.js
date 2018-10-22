@@ -51,6 +51,7 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
+    path: path.resolve(process.cwd(), 'builds/dev'),
   },
 
   optimization: {

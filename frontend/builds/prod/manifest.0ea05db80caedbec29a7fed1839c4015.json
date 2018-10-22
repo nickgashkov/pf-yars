@@ -56,12 +56,12 @@
       "type": "image/png"
     }
   ],
-  "name": "React Boilerplate",
-  "short_name": "React BP",
+  "name": "Yet Another Rating Site",
+  "short_name": "YARS",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": ".",
-  "description": "My React Boilerplate-based project!",
+  "description": "Templates! Templates everywhere!",
   "background_color": "#fafafa",
   "theme_color": "#b1624d"
 }
