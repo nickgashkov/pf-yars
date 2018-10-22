@@ -7,8 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.bundle.js",
-    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.bundle.js"
+    "dev": "webpack --mode development ./src/index.js --output ./build/main.bundle.js",
+    "build": "webpack --mode production ./src/index.js --output ./build/main.bundle.js"
   },
   "author": "Nick Gashkov",
   "license": "MIT",

@@ -9,7 +9,7 @@ __pycache__
 yars/settings/local.py
 
 # Ignore node modules.
-yars/apps/frontend/node_modules
+frontend/node_modules
 
 
 # Keep this '.gitignore'.
@@ -22,4 +22,4 @@ yars/apps/frontend/node_modules
 !.isort.cfg
 
 # Keep 'babel' configuration.
-!yars/apps/frontend/.babelrc
+!frontend/.babelrc
