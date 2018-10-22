@@ -15,11 +15,20 @@ frontend/node_modules
 # Keep this '.gitignore'.
 !.gitignore
 
+# Keep '.gitattributes'.
+!.gitattributes
+
 # Keep '.gitkeep' to commit empty directories.
 !.gitkeep
 
 # Keep 'isort' configuration.
 !.isort.cfg
 
-# Keep 'babel' configuration.
-!frontend/.babelrc
+# Keep frontend configuration.
+!frontend/.eslintrc.js
+!frontend/.nvmrc
+!frontend/.prettierignore
+!frontend/.prettierrc
+!frontend/.stylelintrc
+!frontend/app/.htaccess
+!frontend/app/.nginx.conf

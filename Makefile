@@ -8,11 +8,11 @@ FRONTDIR = $(CODEDIR)/apps/frontend
 
 CUSTOM_COMPILE_COMMAND="make update"
 
-AUTOFLAKESKIP = $(CODEDIR)/settings/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
+AUTOFLAKESKIP = $(SRCDIR)/frontend/**/*.py,$(CODEDIR)/settings/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
 
 
-fmt: _sort _style _frontend_style
-check: _stylecheck _typecheck _frontend_stylecheck
+fmt: _sort _style
+check: _stylecheck _typecheck
 
 update:
 	pip-compile --upgrade --output-file $(DEPSDIR)/base.out $(DEPSDIR)/base.in
@@ -30,9 +30,6 @@ clean:
 _stylecheck:
 	black $(SRCDIR)/ --check
 
-_frontend_stylecheck:
-	npx --prefix $(FRONTDIR) prettier --list-different "**/src/**/*.js"
-
 _typecheck:
 	mypy $(SRCDIR)
 
@@ -42,6 +39,3 @@ _sort:
 
 _style:
 	black $(SRCDIR)/
-
-_frontend_style:
-	npx --prefix $(FRONTDIR) prettier --write "**/src/**/*.js"
