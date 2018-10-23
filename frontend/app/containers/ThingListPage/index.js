@@ -15,6 +15,7 @@ import {
 } from "./selectors";
 import Navbar from "../../components/Navbar/Navbar";
 import {loadThings} from "./actions";
+import List from "../../components/List";
 
 /* eslint-disable react/prefer-stateless-function */
 export class ThingListPage extends React.Component {
@@ -26,7 +27,8 @@ export class ThingListPage extends React.Component {
 
     return <div>
       <Navbar />
-      {this.props.things && this.props.things.map(thing => <span>{thing.name}</span>)}
+      {this.props.error && <span className="has-text-danger">{this.props.error}</span>}
+      {this.props.things && <List headers={['Name', 'Description']} items={this.props.things} itemsKeys={['name', 'description']}/>}
     </div>;
   }
 }

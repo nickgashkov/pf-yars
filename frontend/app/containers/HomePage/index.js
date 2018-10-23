@@ -18,7 +18,17 @@ import Navbar from "../../components/Navbar/Navbar";
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-      <Navbar/>
+      <React.Fragment>
+        <Navbar/>
+        <section className="hero is-fullheight">
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <h1 className="title">YARS</h1>
+              <h2 className="subtitle">Yet Another Rating Site</h2>
+            </div>
+          </div>
+        </section>
+      </React.Fragment>
     );
   }
 }
