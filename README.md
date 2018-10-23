@@ -1,2 +1,1 @@
-# Yet Another Rating System
-
+# Yet Another Rating Site
