@@ -29,7 +29,7 @@ class HttpError extends React.PureComponent {
     return (
       <h2 className="subtitle">
         {this.props.description}
-        </h2>
+      </h2>
     )
   }
 

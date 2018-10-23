@@ -2,8 +2,8 @@
  * Test route reducer
  */
 
-import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
+import { fromJS } from 'immutable';
 import { routeReducer } from '../reducers';
 
 describe('route reducer', () => {
