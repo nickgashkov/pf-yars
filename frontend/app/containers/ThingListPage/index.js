@@ -16,6 +16,7 @@ import {
 import Navbar from "../../components/Navbar/Navbar";
 import {loadThings} from "./actions";
 import List from "../../components/List";
+import Footer from "../../components/Footer/Footer";
 
 /* eslint-disable react/prefer-stateless-function */
 export class ThingListPage extends React.Component {
@@ -29,6 +30,7 @@ export class ThingListPage extends React.Component {
       <Navbar />
       {this.props.error && <span className="has-text-danger">{this.props.error}</span>}
       {this.props.things && <List headers={['Name', 'Description']} items={this.props.things} itemsKeys={['name', 'description']}/>}
+      <Footer/>
     </div>;
   }
 }

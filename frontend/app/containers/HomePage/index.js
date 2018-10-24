@@ -10,9 +10,8 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
@@ -20,7 +19,7 @@ export default class HomePage extends React.PureComponent {
     return (
       <React.Fragment>
         <Navbar/>
-        <section className="hero is-fullheight">
+        <section className="hero is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">YARS</h1>
@@ -28,6 +27,7 @@ export default class HomePage extends React.PureComponent {
             </div>
           </div>
         </section>
+        <Footer/>
       </React.Fragment>
     );
   }
