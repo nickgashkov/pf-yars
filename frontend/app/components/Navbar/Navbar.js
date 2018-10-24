@@ -9,6 +9,9 @@ class Navbar extends React.Component {
           <NavLink exact to="/" activeClassName="is-active" className="navbar-item">Home</NavLink>
           <NavLink exact to="/things/" activeClassName="is-active" className="navbar-item">Things</NavLink>
         </div>
+        <div className="navbar-end">
+          <a href="/admin/" className="navbar-item">Admin</a>
+        </div>
       </nav>
     )
   }

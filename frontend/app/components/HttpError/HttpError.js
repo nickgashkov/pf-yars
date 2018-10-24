@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class HttpError extends React.PureComponent {
   render() {
     return (
-      <section className="hero is-fullheight is-primary">
+      <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered">
             {this.renderErrorCode()}
@@ -35,7 +35,7 @@ class HttpError extends React.PureComponent {
 
   renderLinkTo() {
     return (
-      <Link className="has-text-link" to={this.props.linkTo}>
+      <Link className="has-text-primary" to={this.props.linkTo}>
         Let me out.
       </Link>
     )
