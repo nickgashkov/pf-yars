@@ -6,14 +6,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class List extends React.Component {
   render() {
     return (
       <div className="container" style={{'padding-top': '20px'}}>
           {this.renderCards()}
-          {/*{this.renderHead()}*/}
-          {/*{this.renderBody()}*/}
       </div>
     );
   }
@@ -38,7 +37,7 @@ class List extends React.Component {
     return (
       <div className="card box">
         <header className="card-header">
-          <p className="card-header-title">{item.name}</p>
+          <Link to={item.link} className="card-header-title">{item.name}</Link>
         </header>
         <div className="card-content">
           <div className="content">

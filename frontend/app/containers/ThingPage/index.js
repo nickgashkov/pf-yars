@@ -9,18 +9,18 @@ import injectReducer from 'utils/injectReducer';
 import reducer from './reducer';
 import saga from './saga';
 import {
-  makeSelectThingsError,
-  makeSelectThingsLoading,
-  makeSelectThingsSuccess
+  makeSelectThingError,
+  makeSelectThingLoading,
+  makeSelectThingSuccess
 } from "./selectors";
 import Navbar from "../../components/Navbar/Navbar";
-import {loadThings} from "./actions";
-import List from "../../components/List";
+import {loadThing} from "./actions";
+import Detail from "../../components/Detail";
 
 /* eslint-disable react/prefer-stateless-function */
-export class ThingListPage extends React.Component {
+export class ThingPage extends React.Component {
   componentDidMount () {
-    this.props.loadThings();
+    this.props.loadThing();
   };
 
   render() {
@@ -28,27 +28,27 @@ export class ThingListPage extends React.Component {
     return <div>
       <Navbar />
       {this.props.error && <span className="has-text-danger">{this.props.error}</span>}
-      {this.props.things && <List headers={['Name', 'Description']} items={this.props.things.map(item => Object.assign({}, item, {'link': `/things/${item.id}/`}))} itemsKeys={['name', 'description']}/>}
+      {this.props.item && <Detail item={this.props.item} itemTitleKey={'name'} itemsKeys={['description']} itemKeysNames={['Description']}/>}
     </div>;
   }
 }
 
-ThingListPage.propTypes = {
+ThingPage.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.object,
-  things: PropTypes.array,
-  loadThings: PropTypes.func,
+  item: PropTypes.object,
+  loadThing: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
-  loading: makeSelectThingsLoading(),
-  error: makeSelectThingsError(),
-  things: makeSelectThingsSuccess(),
+  loading: makeSelectThingLoading(),
+  error: makeSelectThingError(),
+  item: makeSelectThingSuccess(),
 });
 
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-  loadThings: loadThings,
+const mapDispatchToProps = (dispatch, ownProps) => bindActionCreators({
+  loadThing: () => loadThing(ownProps.match.params.id)
 }, dispatch);
 
 const withConnect = connect(
@@ -56,11 +56,11 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-const withReducer = injectReducer({ key: 'ThingListPage', reducer });
-const withSaga = injectSaga({ key: 'ThingListPage', saga });
+const withReducer = injectReducer({ key: 'ThingPage', reducer });
+const withSaga = injectSaga({ key: 'ThingPage', saga });
 
 export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(ThingListPage);
+)(ThingPage);
