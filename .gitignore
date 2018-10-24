@@ -38,3 +38,4 @@ frontend/yarn-error.log
 !frontend/.stylelintrc
 !frontend/app/.htaccess
 !frontend/app/.nginx.conf
+!frontend/builds/.htaccess.bin
