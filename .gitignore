@@ -10,14 +10,12 @@ yars/settings/local.py
 
 # Ignore node modules.
 frontend/node_modules
-v-frontend/node_modules
 
 # Ignore development builds.
 frontend/builds/dev
 
 # Ignore 'yarn' error log.
 frontend/yarn-error.log*
-v-frontend/yarn-error.log*
 
 
 # Keep this '.gitignore'.
@@ -33,11 +31,5 @@ v-frontend/yarn-error.log*
 !.isort.cfg
 
 # Keep frontend configuration.
+!frontend/.browserslistrc
 !frontend/.eslintrc.js
-!frontend/.nvmrc
-!frontend/.prettierignore
-!frontend/.prettierrc
-!frontend/.stylelintrc
-!frontend/app/.htaccess
-!frontend/app/.nginx.conf
-!frontend/builds/.htaccess.bin
