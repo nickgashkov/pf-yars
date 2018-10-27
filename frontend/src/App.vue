@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import TheNav from "@/components/TheNav";
+import TheNav from "./components/AppNav";
 
 export default {
   components: { TheNav }

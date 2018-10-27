@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import TheNavLink from "./TheNavLink";
+import TheNavLink from "./AppNavLink";
 export default {
   name: "TheNav",
   components: { TheNavLink }
