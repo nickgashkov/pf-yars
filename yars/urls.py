@@ -9,7 +9,6 @@ from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 from yars.apps.core.views import index
 
 urlpatterns = [
-    re_path("^$|^#/.*$", index, name="spa"),
     path("admin/", admin.site.urls),
     path("api/things/", include("yars.apps.things.urls", namespace="things")),
     path("api/token/obtain/", obtain_jwt_token, name="token_obtain"),
@@ -19,3 +18,7 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    re_path("^.*$", index, name="spa")
+]

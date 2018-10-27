@@ -4,11 +4,11 @@
 SRCDIR = $(shell pwd)
 CODEDIR = $(SRCDIR)/yars
 DEPSDIR = $(SRCDIR)/deploy/requirements
-FRONTDIR = $(CODEDIR)/apps/frontend
+FRONTDIR = $(SRCDIR)/frontend
 
 CUSTOM_COMPILE_COMMAND="make update"
 
-AUTOFLAKESKIP = $(SRCDIR)/frontend/**/*.py,$(CODEDIR)/settings/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
+AUTOFLAKESKIP = $(FRONTDIR)/**/*.py,$(CODEDIR)/settings/*.py,$(CODEDIR)/apps/*/migrations/*.py,$(CODEDIR)/tests/**/*.py
 
 
 fmt: _sort _style
