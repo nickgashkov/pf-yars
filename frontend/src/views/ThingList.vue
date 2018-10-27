@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>ThingList page</h1>
     <thing-list-container/>
   </div>
 </template>

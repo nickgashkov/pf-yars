@@ -1,6 +1,6 @@
 <template>
   <router-link
-    v-bind:to="{'name': to}"
+    v-bind:to="{name: to}"
     class="navbar-item"
   >
     {{ name }}
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "TheNavLink",
+  name: "AppNavLink",
   props: {
     to: String,
     name: String

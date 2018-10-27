@@ -1,14 +1,15 @@
 <template>
   <div>
-    <the-nav/>
+    <app-nav/>
     <router-view/>
   </div>
 </template>
 <script>
-import TheNav from "./components/AppNav";
+import AppNav from "./components/AppNav";
 
 export default {
-  components: { TheNav }
+  name: "App",
+  components: { AppNav }
 };
 
 </script>
