@@ -6,29 +6,24 @@
     </tr>
     </thead>
     <tbody>
-    <tr v-for="item in items" v-bind:key="item[itemBindingKey]">
-      <td v-for="(valueKey, index) in valuesKeys" v-bind:key="valueKey">
-        <router-link
-          v-if="index === 0"
-          v-bind:to="{
-            name: itemDetailRouteName,
-            params: itemDetailRouteParamsGetter(item)
-          }"
-        >
-          {{ item[valueKey] }}
-        </router-link>
-        <span v-else>
-          {{ item[valueKey] }}
-        </span>
-      </td>
-    </tr>
+      <app-table-item
+        v-for="item in items"
+        v-bind:key="item[itemBindingKey]"
+        v-bind:item="item"
+        v-bind:valuesKeys="valuesKeys"
+        v-bind:itemDetailRouteName="itemDetailRouteName"
+        v-bind:itemDetailRouteParamsGetter="itemDetailRouteParamsGetter"
+      />
     </tbody>
   </table>
 </template>
 
 <script>
+import AppTableItem from "./AppTableItem";
+
 export default {
-  name: "AppList",
+  name: "AppTable",
+  components: { AppTableItem },
   props: {
     items: Array,
     headers: Array,

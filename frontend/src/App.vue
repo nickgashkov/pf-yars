@@ -4,6 +4,7 @@
     <router-view/>
   </div>
 </template>
+
 <script>
 import AppNav from "./components/AppNav";
 
@@ -13,3 +14,7 @@ export default {
 };
 
 </script>
+
+<style lang="scss">
+  @import '~bulma';
+</style>

@@ -1,16 +1,16 @@
 <template>
-  <app-detail v-bind:item="thing"/>
+  <thing-detail v-bind:item="thing"/>
 </template>
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-import AppDetail from '../components/AppDetail'
+import ThingDetail from '../components/ThingDetail'
 
 const { mapState, mapActions } = createNamespacedHelpers('things');
 
 export default {
   name: "ThingDetailContainer",
-  components: { AppDetail },
+  components: { ThingDetail },
   mounted: function () {
     this.loadThing({"id": this.$route.params.id})
   },

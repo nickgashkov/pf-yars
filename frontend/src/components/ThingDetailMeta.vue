@@ -1,10 +1,12 @@
 <template>
-  <span>{{ item.name }}</span>
+  <div>
+    Meta will be there.
+  </div>
 </template>
 
 <script>
   export default {
-    name: "AppDetail",
+    name: "ThingDetailMeta",
     props: {
       item: Object
     }
