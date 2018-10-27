@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <thing-list-container/>
-  </div>
+  <thing-list-container/>
 </template>
 
 <script>

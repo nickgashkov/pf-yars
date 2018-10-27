@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["thing-detail"],{1935:function(e,n,t){"use strict";t.r(n);var i=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h1",[e._v("ThingDetail page")])},l=[],a=t("2877"),u={},o=Object(a["a"])(u,i,l,!1,null,null,null);o.options.__file="ThingDetail.vue";n["default"]=o.exports}}]);
-//# sourceMappingURL=thing-detail.d108b5e8.js.map
