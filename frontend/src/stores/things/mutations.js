@@ -1,9 +1,9 @@
 const setThing = (state, payload) => {
-  state.thing = payload.thing
+  state.thing = payload.thing;
 };
 
 const setThings = (state, payload) => {
-  state.things = payload.things
+  state.things = payload.things;
 };
 
 export { setThing };

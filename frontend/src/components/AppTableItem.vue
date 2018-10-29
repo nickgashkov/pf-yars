@@ -24,7 +24,7 @@ export default {
     item: Object,
     valuesKeys: Array,
     itemDetailRouteName: String,
-    itemDetailRouteParamsGetter: Function,
-  },
-}
+    itemDetailRouteParamsGetter: Function
+  }
+};
 </script>

@@ -3,26 +3,18 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex'
-import ThingDetail from '../components/ThingDetail'
+import { createNamespacedHelpers } from "vuex";
+import ThingDetail from "../components/ThingDetail";
 
-const { mapState, mapActions } = createNamespacedHelpers('things');
+const { mapState, mapActions } = createNamespacedHelpers("things");
 
 export default {
   name: "ThingDetailContainer",
   components: { ThingDetail },
-  mounted: function () {
-    this.loadThing({"id": this.$route.params.id})
+  mounted: function() {
+    this.loadThing({ id: this.$route.params.id });
   },
-  computed: mapState(
-    [
-      'thing'
-    ]
-  ),
-  methods: mapActions(
-    [
-      'loadThing'
-    ]
-  )
-}
+  computed: mapState(["thing"]),
+  methods: mapActions(["loadThing"])
+};
 </script>

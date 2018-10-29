@@ -10,31 +10,23 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex'
-import AppTable from '../components/AppTable'
+import { createNamespacedHelpers } from "vuex";
+import AppTable from "../components/AppTable";
 
-const { mapState, mapActions } = createNamespacedHelpers('things');
+const { mapState, mapActions } = createNamespacedHelpers("things");
 
 export default {
   name: "ThingListContainer",
   components: { AppTable },
-  mounted () {
-    this.loadThings()
+  mounted() {
+    this.loadThings();
   },
-  computed: mapState(
-    [
-      'things'
-    ]
-  ),
+  computed: mapState(["things"]),
   methods: {
-    getDetailRouteParams: function (item) {
-      return {id: item.id};
+    getDetailRouteParams: function(item) {
+      return { id: item.id };
     },
-    ...mapActions(
-      [
-        'loadThings'
-      ]
-    )
+    ...mapActions(["loadThings"])
   }
-}
+};
 </script>

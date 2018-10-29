@@ -1,5 +1,5 @@
 <template>
-  <table class="table is-striped is-hoverable">
+  <table class="table is-striped is-hoverable is-fullwidth">
     <thead>
     <tr>
       <th v-for="header in headers" v-bind:key="header">{{ header }}</th>
@@ -33,7 +33,7 @@ export default {
     itemBindingKey: {
       type: String,
       default: "id"
-    },
-  },
-}
+    }
+  }
+};
 </script>

@@ -3,10 +3,10 @@
 </template>
 
 <script>
-  import ThingDetailContainer from "../containers/ThingDetailContainer"
+import ThingDetailContainer from "../containers/ThingDetailContainer";
 
-  export default {
-    name: "ThingDetail",
-    components: { ThingDetailContainer }
-  }
+export default {
+  name: "ThingDetail",
+  components: { ThingDetailContainer }
+};
 </script>

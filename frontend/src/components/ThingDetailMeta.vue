@@ -1,14 +1,12 @@
 <template>
-  <div>
-    Meta will be there.
-  </div>
+  <div/>
 </template>
 
 <script>
-  export default {
-    name: "ThingDetailMeta",
-    props: {
-      item: Object
-    }
+export default {
+  name: "ThingDetailMeta",
+  props: {
+    item: Object
   }
+};
 </script>

@@ -8,6 +8,9 @@ __pycache__
 # Ignore local settings.
 yars/settings/local.py
 
+# Ignore local files.
+files/
+
 # Ignore node modules.
 frontend/node_modules
 

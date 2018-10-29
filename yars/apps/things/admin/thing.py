@@ -3,9 +3,9 @@ from __future__ import annotations
 from django.apps import apps
 from django.contrib import admin
 
-recipe_model = apps.get_model("things.thing")
+thing_model = apps.get_model("things.Thing")
 
 
-@admin.register(recipe_model)
-class RecipeAdmin(admin.ModelAdmin):
+@admin.register(thing_model)
+class ThingAdmin(admin.ModelAdmin):
     pass

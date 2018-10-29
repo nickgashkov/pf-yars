@@ -8,5 +8,12 @@ module.exports = {
     }
   },
   indexPath: "../../templates/index.html",
-  baseUrl: process.env.NODE_ENV === "production" ? "/static/" : "/"
+  baseUrl: process.env.NODE_ENV === "production" ? "/static/" : "/",
+  chainWebpack: config => {
+    const svgRule = config.module.rule("svg");
+
+    svgRule.uses.clear();
+
+    svgRule.use("vue-svg-loader").loader("vue-svg-loader");
+  }
 };
